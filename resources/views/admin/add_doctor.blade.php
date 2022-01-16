@@ -21,7 +21,7 @@
             <input type="text" style="color:black" name="name" placeholder="Write the name">
         </div>
 </div>
-</div>
+</div> <!--  ... -->
         <!-- partial -->
     <!-- container-scroller -->
     <!-- plugins:js -->
