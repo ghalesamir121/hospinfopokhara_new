@@ -1,3 +1,3 @@
-<x-app-layout>
-    <h1> This is user dashboard</h1>
-</x-app-layout>
+<x-guest-layout>
+    <h1>hello this is sub admin</h1>
+</x-guest-layout>
