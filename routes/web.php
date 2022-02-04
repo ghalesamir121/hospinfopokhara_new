@@ -17,3 +17,6 @@ Route::post('/register_hospital', [AdminController::class, 'register']);
 
 Route::get('/add_doctor_view', [SubAdminController::class, 'addview']);
 Route::post('/upload_doctor', [SubAdminController::class, 'upload']);
+
+Route::get('/add_bed_view', [SubAdminController::class, 'bedview']);
+Route::post('/add_bed', [SubAdminController::class, 'add']);

@@ -18,7 +18,7 @@ class CreateDoctorsTable extends Migration
             $table->string('name')->nullable();
             $table->string('phone')->nullable();
             $table->string('speciality')->nullable();
-            $table->string('working')->nullable();
+            $table->string('work')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });

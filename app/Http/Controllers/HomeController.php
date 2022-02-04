@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\add_bed;
+use App\Models\Admin;
 use Illuminate\Http\Request;
 use illuminate\Support\Facades\Auth;
 use App\Models\User;

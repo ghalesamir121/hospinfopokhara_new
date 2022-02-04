@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\HomeController;
 use Illuminate\Http\Request;
 use App\Models\Admin;
 
@@ -22,11 +22,13 @@ class AdminController extends Controller
        $admin->email=$request->email;
        $admin->number=$request->number;
        $admin->address=$request->address;
-       $admin->usertype=$request->usertype;
        $admin->password=$request->password;
 
        $admin->save();
        return redirect()->back()->with('message','Hospital  Added Successfully');
+
+
+      
     }
 }
 

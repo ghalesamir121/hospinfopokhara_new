@@ -8,11 +8,12 @@
         <div class="profile-desc">
           <div class="profile-pic">
             <div class="count-indicator">
-              <img class="img-xs rounded-circle " src="admin/assets/images/faces/face15.jpg" alt="">
+              <img src="{{ asset('/Source') }}/logo.JPG" width="200" height="300">
+              {{-- <img class="img-xs rounded-circle " src="admin/assets/images/faces/face15.jpg" alt=""> --}}
               <span class="count bg-success"></span>
             </div>
             <div class="profile-name">
-              <h5 class="mb-0 font-weight-normal">Admin</h5>
+              <h5 class="mb-0 font-weight-normal">Admin Dashboard</h5>
               <span><!--Gold Member--></span>
             </div>
           </div>
@@ -67,11 +68,19 @@
       </li>
 
       <li class="nav-item menu-items">
-        <a class="nav-link" href="{{url('')}}">
+        <a class="nav-link" href="{{url('add_bed_view')}}">
           <span class="menu-icon">
             <i class="mdi mdi-file-document-box"></i>
           </span>
-          <span class="menu-title">Delete Doctors</span>
+          <span class="menu-title">add_bed</span>
+        </a>
+      </li>
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="{{url('update_bed_view')}}">
+          <span class="menu-icon">
+            <i class="mdi mdi-file-document-box"></i>
+          </span>
+          <span class="menu-title">update_bed</span>
         </a>
       </li>
     </ul>

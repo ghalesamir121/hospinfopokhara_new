@@ -8,11 +8,12 @@
         <div class="profile-desc">
           <div class="profile-pic">
             <div class="count-indicator">
-              <img class="img-xs rounded-circle " src="admin/assets/images/faces/face15.jpg" alt="">
+              <img src="{{ asset('/Source') }}/logo.JPG" width="200" height="300">
+              {{-- <img class="img-xs rounded-circle " src="admin/assets/images/faces/face15.jpg" alt=""> --}}
               <span class="count bg-success"></span>
             </div>
             <div class="profile-name">
-              <h5 class="mb-0 font-weight-normal">Admin</h5>
+              <h5 class="mb-0 font-weight-normal">Administrator</h5>
               <span><!--Gold Member--></span>
             </div>
           </div>
@@ -74,5 +75,6 @@
           <span class="menu-title">Delete Hospital</span>
         </a>
       </li>
+
     </ul>
   </nav>

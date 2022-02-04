@@ -52,7 +52,7 @@
         </select>
     </div>
         <div style="padding: 10px;" > 
-            <label>Doctor working</label>
+            <label>Doctor work</label>
             <input type="text" style="color:black;" name="hospital" placeholder="Write Hospital Name" required="">
         </div>
     

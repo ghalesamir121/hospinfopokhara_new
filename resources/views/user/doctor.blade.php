@@ -19,7 +19,7 @@
               <p class="text-xl mb-0">Name:  {{ $doctors->name }}</p>
               <span class="text-sm text-grey">Phone: {{ $doctors->phone }}</span><br>
               <span class="text-sm text-grey">Speciality: {{$doctors->speciality }}</span><br>
-              <span class="text-sm text-grey">Working in: {{ $doctors->working }}</span><br>
+              <span class="text-sm text-grey">Working: {{ $doctors->work }}</span><br>
             </div>
           </div>
         </div>

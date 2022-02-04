@@ -50,14 +50,7 @@
           <label>Hospital Address</label>
           <input type="text" style="color:black;" name="address" placeholder="Write Hospital Address " required="">
       </div>
-      <div style="padding: 10px;" > 
-        <label>Hospital Usertype</label>
-        <select name="usertype" style="color: black" required="">
-          <option value="">--select--</option>
-          <option value="0">0</option>
-        </select>
-      </div>
-      
+  
       <div style="padding: 10px;" > 
         <label>Hospital Password</label>
         <input type="text" style="color:black;" name="password" placeholder="Write Hospital Password" required="">
