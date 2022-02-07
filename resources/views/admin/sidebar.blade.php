@@ -68,11 +68,19 @@
       </li>
 
       <li class="nav-item menu-items">
-        <a class="nav-link" href="{{url('')}}">
+        <a class="nav-link" href="{{url('deletehospital')}}">
           <span class="menu-icon">
             <i class="mdi mdi-file-document-box"></i>
           </span>
           <span class="menu-title">Delete Hospital</span>
+        </a>
+      </li>
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="{{url('approve')}}">
+          <span class="menu-icon">
+            <i class="mdi mdi-file-document-box"></i>
+          </span>
+          <span class="menu-title">Delete Doctor</span>
         </a>
       </li>
 

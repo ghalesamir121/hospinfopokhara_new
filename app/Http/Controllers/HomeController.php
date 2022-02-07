@@ -9,12 +9,14 @@ use illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Doctor;
 
+
 class HomeController extends Controller
 {
     public function redirect()
     {
         if (Auth::id()) {
             if (Auth::user()->usertype == '0') {
+            
                 return view('subadmin.home');
             } else {
                 return view('admin.home');
@@ -25,7 +27,13 @@ class HomeController extends Controller
     }
     public function index()
     {
+        $viewbed=add_bed::all();
+        return view('user.home',compact('viewbed'));
+    }
+    public function doctor()
+    {
         $doctor=doctor::all();
-        return view('user.home',compact('doctor'));
+        return view('user.Doctors',compact('doctor'));
+       
     }
 }

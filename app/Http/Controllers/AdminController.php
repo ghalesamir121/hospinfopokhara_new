@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\HomeController;
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use App\Models\Doctor;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -11,6 +13,7 @@ class AdminController extends Controller
     {
         return view('admin.add_hospital');
     }
+
     public function register(Request $request)
     {
        $admin=new admin;
@@ -26,9 +29,27 @@ class AdminController extends Controller
 
        $admin->save();
        return redirect()->back()->with('message','Hospital  Added Successfully');
-
-
-      
     }
+
+    
+
+    public function approve()
+    {
+        $data=doctor::all();
+        return view('admin.approve',compact('data'));
+    }
+
+    public function deletehospital()
+    {
+        $hospital=admin::all();
+        return view('admin.deletehospital',compact('hospital'));
+
+    }
+    public function delete_hospital($id)
+    {
+        DB::delete('delete from admins where id=?',[$id]);
+        return redirect('deletehospital')->with('success','Doctor deleted');
+
+    } 
 }
 

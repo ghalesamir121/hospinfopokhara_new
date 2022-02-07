@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Doctor;
 use App\Models\add_bed;
+use Illuminate\Support\Facades\DB;
 
 class SubAdminController extends Controller
 {
@@ -47,7 +48,13 @@ class SubAdminController extends Controller
 
         $add_bed->save();
        return redirect()->back()->with('message','Bed and ICU Added Successfully');
-
     }
+
+       public function delete_function($id)
+       {
+           DB::delete('delete from doctors where id=?',[$id]);
+           return redirect('approve')->with('success','Doctor deleted');
+   
+       } 
 
 }

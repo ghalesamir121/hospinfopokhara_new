@@ -38,7 +38,7 @@
 
      <div style="padding: 10px;"> 
         <label>Doctor Phone</label>
-        <input type="number" style="color:black;" name="number" placeholder="Enter Doctor phone number" required="">
+        <input type="number" style="color:black;" name="number" placeholder="Enter Doctor phone number" pattern="[0-9]{10}" title="Please Enter 10 Digit" required="">
     </div>
 
     <div style="padding: 10px;" > 

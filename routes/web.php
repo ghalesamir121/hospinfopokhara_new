@@ -20,3 +20,9 @@ Route::post('/upload_doctor', [SubAdminController::class, 'upload']);
 
 Route::get('/add_bed_view', [SubAdminController::class, 'bedview']);
 Route::post('/add_bed', [SubAdminController::class, 'add']);
+
+Route::get('/approve', [AdminController::class, 'approve']);
+Route::get('/delete/{id}',[SubAdminController::class, 'delete_function']);
+
+Route::get('/deletehospital', [AdminController::class, 'deletehospital']);
+Route::get('/click_delete/{id}',[AdminController::class, 'delete_hospital']);
