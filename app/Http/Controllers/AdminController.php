@@ -3,12 +3,34 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\HomeController;
 use Illuminate\Http\Request;
-use App\Models\Admin;
 use App\Models\Doctor;
 use Illuminate\Support\Facades\DB;
+use App\Models\Admin;
+use App\Models\User;
 
 class AdminController extends Controller
 {
+    // public function shiftdata()
+    // {
+    //     $admins=Admin::get();
+    //     dd($admins);
+
+    //     foreach ($admins as $key => $value) {
+    //         User::create([
+    //             'name'=>$value->name,
+    //             'email'=>$value->email,
+    //             'number'=>$value->number,
+    //             'address'=>$value->address,
+    //             'password'=>$value->password,
+    //             'image'=>$value->image,
+    //         ]);
+    //     }
+    //     return'shift data successfully';
+    // }
+
+
+
+
     public function addhospital()
     {
         return view('admin.add_hospital');

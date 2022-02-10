@@ -15,6 +15,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/add_hospital_view', [AdminController::class, 'addhospital']);
 Route::post('/register_hospital', [AdminController::class, 'register']);
 
+
+// Route::get('shift_date',[AdminController::class,'shiftdata'])->name('shiftdata');
+
+
+
 Route::get('/add_doctor_view', [SubAdminController::class, 'addview']);
 Route::post('/upload_doctor', [SubAdminController::class, 'upload']);
 

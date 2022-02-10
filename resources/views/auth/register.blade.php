@@ -20,8 +20,8 @@
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
             <div>
-                <x-jet-label for="phone" value="{{ __('phone') }}" />
-                <x-jet-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autofocus autocomplete="phone" />
+                <x-jet-label for="number" value="{{ __('number') }}" />
+                <x-jet-input id="number" class="block mt-1 w-full" type="text" name="number" :value="old('number')" required autofocus autocomplete="number" />
             </div>
 
 
