@@ -14,14 +14,33 @@ class HomeController extends Controller
 {
     public function redirect()
     {
-        if (Auth::id()) {
-            if (Auth::user()->usertype == '0') {
+        // if (Auth::id()) {
+        //     if (Auth::user()->usertype == '0') {
             
+        //         return view('subadmin.home');
+        //     } else {
+        //         return view('admin.home');
+        //     }
+        // } else {
+        //     return redirect()->back();
+        // }
+
+
+        if (Auth::id()) {
+            if (Auth::user()->usertype == '1') 
+            {
                 return view('subadmin.home');
-            } else {
+            }
+             elseif(Auth::user()->usertype == '2')
+             {
                 return view('admin.home');
             }
-        } else {
+            else
+            {
+                return view('user.dashboard') ;
+            }
+        } 
+        else{
             return redirect()->back();
         }
     }
@@ -33,7 +52,8 @@ class HomeController extends Controller
     public function doctor()
     {
         $doctor=doctor::all();
-        return view('user.Doctors',compact('doctor'));
+        // return view('user.Doctors',compact('doctor'));
+        return view('doctor.Doctors',compact('doctor'));
        
     }
 }

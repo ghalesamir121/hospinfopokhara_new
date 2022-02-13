@@ -27,9 +27,11 @@ class SubAdminController extends Controller
        $doctor->phone=$request->number;
        $doctor->speciality=$request->speciality;
        $doctor->work=$request->hospital;
+       $doctor->status='0';
+       
 
        $doctor->save();
-       return redirect()->back()->with('message','Doctor Added Successfully');
+       return redirect()->back()->with('message','Doctor Added Successfully.. wait for Admin Approve for Display');
     }
 
 

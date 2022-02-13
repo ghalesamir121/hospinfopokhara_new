@@ -1,4 +1,4 @@
-{{-- <div class="page-section">
+<div class="page-section">
     <div class="container">
       <h1 class="text-center mb-5 wow fadeInUp">Popular Doctors</h1>
 
@@ -27,4 +27,4 @@
         @endforeach
       </div>
     </div>
-  </div> --}}
+  </div>

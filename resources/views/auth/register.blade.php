@@ -11,34 +11,47 @@
             @csrf
 
             <div>
-                <x-jet-label for="name" value="{{ __('Name') }}" />
-                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-jet-label for="name" value="{{ __('Name:') }}" />
+                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" placeholder="Write Hospital Name.." required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                <x-jet-label for="email" value="{{ __('Email:') }}" />
+                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required placeholder="Write Hospital Email.." />
             </div>
+            
             <div>
-                <x-jet-label for="number" value="{{ __('number') }}" />
-                <x-jet-input id="number" class="block mt-1 w-full" type="text" name="number" :value="old('number')" required autofocus autocomplete="number" />
+                <x-jet-label for="number" value="{{ __('Number:') }}" />
+                <x-jet-input id="number" class="block mt-1 w-full" type="text" name="number" :value="old('number')" required autofocus autocomplete="number" placeholder="Enter Hospital Number.."/>
             </div>
 
 
             <div>
-                <x-jet-label for="address" value="{{ __('address') }}" />
-                <x-jet-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required autofocus autocomplete="address" />
+                <x-jet-label for="address" value="{{ __('Address:') }}" />
+                <x-jet-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required autofocus autocomplete="address"  placeholder="Write Hospital Address.."/>
+            </div>   
+
+            <div class="mt-4">
+                <x-jet-label for="password" value="{{ __('Password:') }}" />
+                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password"  placeholder="Enter your New Password.."/>
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+                <x-jet-label for="password_confirmation" value="{{ __('Confirm Password:') }}" />
+                <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password"  placeholder="ReEnter your Password.."/>
             </div>
+{{-- 
+            <div style="padding: 10px;"> 
+                <label> Choose Hospital Image</label>
+              <input type="file" name="file" required="" >
+            </div> --}}
 
             <div class="mt-4">
-                <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+                <x-jet-label for="image" value="{{ __('Choose Hospital Image:') }}" />
+                <x-jet-input id="image" class="block mt-1 w-full" type="file" name="image" required autocomplete="new-image"/>
             </div>
+    
+
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">

@@ -10,51 +10,72 @@ use App\Models\User;
 
 class AdminController extends Controller
 {
-    // public function shiftdata()
+    // public function addhospital()
     // {
-    //     $admins=Admin::get();
-    //     dd($admins);
-
-    //     foreach ($admins as $key => $value) {
-    //         User::create([
-    //             'name'=>$value->name,
-    //             'email'=>$value->email,
-    //             'number'=>$value->number,
-    //             'address'=>$value->address,
-    //             'password'=>$value->password,
-    //             'image'=>$value->image,
-    //         ]);
-    //     }
-    //     return'shift data successfully';
+    //     return view('admin.add_hospital');
     // }
 
+    // public function register(Request $request)
+    // {
+    //    $admin=new admin;
+    //    $image=$request->file;
+    //    $imagename=time().'.'.$image->getClientOriginalExtension();
+    //    $request->file->move('adminimage',$imagename);
+    //    $admin->image=$imagename;
+    //    $admin->name=$request->name;
+    //    $admin->email=$request->email;
+    //    $admin->number=$request->number;
+    //    $admin->address=$request->address;
+    //    $admin->password=$request->password;
 
+    //    $admin->save();
+    //    return redirect()->back()->with('message','Hospital  Added Successfully');
+    // }
 
-
-    public function addhospital()
+    //for approve hospital
+    public function approvehospital()
     {
-        return view('admin.add_hospital');
+        $hospital=User::all();
+        return view('admin.approvehospital',compact('hospital'));
+    }
+    public function usertype(Request $request,$id)
+    {
+        $data=User::find($id);
+       if($data->usertype==0)
+       {
+           $data->usertype=1;
+       }else
+       {
+           $data->usertype=0;
+        }
+         $data->save();
+         return redirect()->back()->with('message',$data->name.'  status changed Successfully');
     }
 
-    public function register(Request $request)
+    //for approve doctor
+ public function approvedoctor()
     {
-       $admin=new admin;
-       $image=$request->file;
-       $imagename=time().'.'.$image->getClientOriginalExtension();
-       $request->file->move('adminimage',$imagename);
-       $admin->image=$imagename;
-       $admin->name=$request->name;
-       $admin->email=$request->email;
-       $admin->number=$request->number;
-       $admin->address=$request->address;
-       $admin->password=$request->password;
-
-       $admin->save();
-       return redirect()->back()->with('message','Hospital  Added Successfully');
+        $doctor=Doctor::all();
+        return view('admin.approvedoctor',compact('doctor'));
     }
 
+public function status(Request $request,$id)
+    {
+        $value=Doctor::find($id);
+       if($value->status==0)
+       {
+           $value->status=1;
+       }else
+       {
+           $value->status=0;
+        }
+        
+         $value->save();
+         return redirect()->back()->with('message',$value->name.'  status changed Successfully');
+    }
     
 
+    //for delete hospital
     public function approve()
     {
         $data=doctor::all();
@@ -63,14 +84,14 @@ class AdminController extends Controller
 
     public function deletehospital()
     {
-        $hospital=admin::all();
+        $hospital=user::All();
         return view('admin.deletehospital',compact('hospital'));
 
     }
     public function delete_hospital($id)
     {
-        DB::delete('delete from admins where id=?',[$id]);
-        return redirect('deletehospital')->with('success','Doctor deleted');
+        DB::delete('delete from users where usertype=?',[$id]);
+        return redirect('deletehospital')->with('success','Hospital deleted');
 
     } 
 }

@@ -23,23 +23,21 @@
                      <th style="padding: 15px;">email</th>
                      <th style="padding: 15px;">number</th>
                      <th style="padding: 15px;">address</th>
-                     <th style="padding: 15px;">usertype</th>
-                     <th style="padding: 15px;">password</th>
+                     <th style="padding: 15px;">status</th>
                      <th style="padding: 15px;">image</th>
                      <th style="padding: 15px;">Delete</th>
                  </tr>
 
-                 @foreach ($hospital as $admins)
+                 @foreach ($hospital as $users)
                  <tr align="center" style="background-color: skyblue";>
-                     <td>{{ $admins->name }}</td>
-                     <td>{{ $admins->email }}</td>
-                     <td>{{ $admins->number }}</td>
-                     <td>{{ $admins->address }}</td>
-                     <td>{{ $admins->usertype }}</td>
-                     <td>{{ $admins->password }}</td>
-                     <td>{{ $admins->image }}</td>
+                     <td>{{ $users->name }}</td>
+                     <td>{{ $users->email }}</td>
+                     <td>{{ $users->number }}</td>
+                     <td>{{ $users->address }}</td>
+                     <td>{{ $users->status }}</td>
+                     <td>{{ $users->image }}</td>
                      <td>
-                         <a class="btn btn-danger" href="/click_delete/{{ $admins->id }}">Delete</a>
+                         <a class="btn btn-danger" href="/click_delete/{{ $users->id }}">Delete</a>
                      </td>
                  </tr>
                  @endforeach

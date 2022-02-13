@@ -82,6 +82,5 @@
           </span>
           <span class="menu-title">update_bed</span>
         </a>
-      </li>
     </ul>
   </nav>

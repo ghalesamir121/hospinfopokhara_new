@@ -35,7 +35,7 @@
               <a class="nav-link" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="doctor.html">Doctors</a>
+              <a class="nav-link" href="displaydoctor.blade.php">Doctors</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="blog.html">News</a>
@@ -56,9 +56,9 @@
               <a class="btn btn-primary ml-lg-3" href="{{Route('login')}}">Login</a>
             </li>
 
-            {{-- <li class="nav-item">
+            <li class="nav-item">
                 <a class="btn btn-primary ml-lg-3" href="{{Route('register')}}">Register</a>
-              </li> --}}
+              </li>
               @endauth
               @endif
 
