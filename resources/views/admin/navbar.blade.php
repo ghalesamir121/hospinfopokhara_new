@@ -157,11 +157,8 @@
                 <i class="mdi mdi-menu-down d-none d-sm-block"></i>
               </div>
             </a>--><ul><li>
-<<<<<<< HEAD
             <!-- <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
-=======
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
->>>>>>> 468258d7d7b5bc35f402869d29ff5cabc8d804ee
               <h6 class="p-3 mb-0">Profile</h6>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item preview-item">
@@ -188,24 +185,18 @@
               <div class="dropdown-divider"></div>
               <p class="p-3 mb-0 text-center">Advanced settings</p>
             </div>
-<<<<<<< HEAD
             </li> -->
-=======
             </li>
->>>>>>> 468258d7d7b5bc35f402869d29ff5cabc8d804ee
         <x-app-layout>
       </x-app-layout>
   </li>
        </ul>
-<<<<<<< HEAD
        <!-- <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
           <span class="mdi mdi-format-line-spacing"></span>
         </button> -->
-=======
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
           <span class="mdi mdi-format-line-spacing"></span>
         </button>
->>>>>>> 468258d7d7b5bc35f402869d29ff5cabc8d804ee
       </div>
     </nav>
 
