@@ -91,7 +91,7 @@ public function status(Request $request,$id)
     public function delete_hospital($id)
     {
         DB::delete('delete from users where usertype=?',[$id]);
-        return redirect('deletehospital')->with('success','Hospital deleted');
+        return redirect('deletehospital')->with('message','Hospital deleted');
 
     } 
 }

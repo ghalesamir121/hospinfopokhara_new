@@ -8,11 +8,11 @@
       <div class="item">
         <div class="card-doctor">
            <div class="header">
-            {{-- <img height="300 px" src="adminimage/{{ $admins->image }}" alt="">
+            {{-- <img height="300 px" src="adminimage/{{ $admins->image }}" alt=""> --}}
              <div class="meta">
-              <a href="#"><span class="mai-call"></span></a>
-              <a href="#"><span class="mai-logo-whatsapp"></span></a>
-            </div>  --}}
+              {{-- <a href="https://gpphlreport.dolphin.com.np/"><span class="mai-call"></span></a> --}}
+              {{-- <a href="#"><span class="mai-logo-whatsapp"></span></a> --}}
+            </div> 
           </div>
           <div class="body">
             <p class="text-xl mb-0">Hospital:  {{ $add_beds->total_bed }}</p>

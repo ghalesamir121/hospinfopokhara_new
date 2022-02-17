@@ -89,6 +89,7 @@
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
             <div class="img-place custom-img-1">
               <img src="../assets/img/bg-doctor.png" alt="">
+
             </div>
           </div>
         </div>
@@ -98,6 +99,30 @@
 
   {{-- @include('user.doctor') --}}
   @include('user.viewbed') 
+
+ {{-- @include('user.viewreport') --}}
+
+ <div class="page-section pb-0">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 py-3 wow fadeInUp">
+        <h1>OUR OTHER SERVICES </h1><br>
+        <a href="https://gpphlreport.dolphin.com.np/" class="btn btn-primary">View covid Report</a>
+
+        <a href="https://vaccine.mohp.gov.np/" class="btn btn-primary">Vaccine Registration </a>
+        <br>
+        <br>
+        <a href="https://raktadatanepal.com/" class="btn btn-primary">Blood Donation </a>
+      </div>
+      <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
+        <div class="img-place custom-img-1">
+          <img src="../assets/img/logo1.png" alt="">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
  
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 

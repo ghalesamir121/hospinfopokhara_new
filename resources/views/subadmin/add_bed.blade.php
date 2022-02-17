@@ -31,18 +31,27 @@
 
  <form action="{{ url('add_bed') }}" method="POST" enctype="multipart/form-data">
     @csrf
-     <div style="padding: 10px;"> 
+
+  <div style="padding: 10px;"> 
+      <label>Total Bed:</label>
+      <input type="number" style="color:black;" name="totalbed" placeholder="Enter Total Bed" required="" min="1">
+  </div>
+
+    <div style="padding: 10px;"> 
         <label>Total Bed:</label>
         <input type="number" style="color:black;" name="totalbed" placeholder="Enter Total Bed" required="" min="1">
     </div>
+
     <div style="padding: 10px;"> 
         <label>Available Bed:</label>
         <input type="number" style="color:black;" name="availablebed" placeholder="Enter Available Bed" required="" min="1">
     </div>
+
     <div style="padding: 10px;"> 
         <label>Total ICU:</label>
         <input type="number" style="color:black;" name="totalicu" placeholder="Enter Total ICU" required="" min="1">
     </div>
+    
     <div style="padding: 10px;"> 
         <label>Available ICU:</label>
         <input type="number" style="color:black;" name="availableicu" placeholder="Enter Available ICU" required="" min="1">
