@@ -40,14 +40,11 @@
                 <x-jet-label for="password_confirmation" value="{{ __('Confirm Password:') }}" />
                 <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password"  placeholder="ReEnter your Password.."/>
             </div>
-<<<<<<< HEAD
-=======
 {{--
             <div style="padding: 10px;">
                 <label> Choose Hospital Image</label>
               <input type="file" name="file" required="" >
             </div> --}}
->>>>>>> 37d6980450ac718227d10ff7a7e322ed0476f55e
 
             <div class="mt-4">
                 <x-jet-label for="image" value="{{ __('Choose Hospital Image:') }}" />
