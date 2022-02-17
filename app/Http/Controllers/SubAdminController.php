@@ -55,7 +55,7 @@ class SubAdminController extends Controller
        public function delete_function($id)
        {
            DB::delete('delete from doctors where id=?',[$id]);
-           return redirect('approve')->with('success','Doctor deleted');
+           return redirect('approve')->with('message','Doctor deleted');
    
        } 
 
