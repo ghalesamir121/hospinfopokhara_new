@@ -18,6 +18,7 @@ class CreateAddBedsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('hospital');
             $table->string('total_bed')->nullable();
             $table->string('available_bed')->nullable();
             $table->string('total_icu')->nullable();

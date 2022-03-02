@@ -28,14 +28,14 @@ class SubAdminController extends Controller
        $doctor->speciality=$request->speciality;
        $doctor->work=$request->hospital;
        $doctor->status='0';
-       
+
 
        $doctor->save();
        return redirect()->back()->with('message','Doctor Added Successfully.. wait for Admin Approve for Display');
     }
 
 
-    
+
     public function bedview()
     {
         return view('subadmin.add_bed');
@@ -43,6 +43,7 @@ class SubAdminController extends Controller
     public function add(Request $request)
     {
         $add_bed=new add_bed;
+        $add_bed->hospital=$request->hospital;
         $add_bed->total_bed=$request->totalbed;
         $add_bed->available_bed=$request->availablebed;
         $add_bed->total_icu=$request->totalicu;
@@ -56,7 +57,7 @@ class SubAdminController extends Controller
        {
            DB::delete('delete from doctors where id=?',[$id]);
            return redirect('approve')->with('message','Doctor deleted');
-   
-       } 
+
+       }
 
 }
