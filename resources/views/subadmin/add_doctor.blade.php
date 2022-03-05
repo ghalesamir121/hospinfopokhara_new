@@ -51,10 +51,14 @@
             <option value="Heart">Heart</option>
         </select>
     </div>
-        <div style="padding: 10px;" > 
-            <label>Doctor work</label>
-            <input type="text" style="color:black;" name="hospital" placeholder="Write Hospital Name" required="">
-        </div>
+    <div style="padding: 10px;">
+      <label>Work:</label>
+      <select name="hospital" style="color: black" required="">
+          <option value="{{ Auth::user()->name }}" selected>{{ Auth::user()->name }}</option>
+
+      </select>
+  </div>
+
     
         <div style="padding: 10px;"> 
             <label>Doctor Image</label>

@@ -24,6 +24,7 @@
                      <th style="padding: 15px;">speciality</th>
                      <th style="padding: 15px;">work</th>
                      <th style="padding: 15px;">image</th>
+                     <th style="padding: 15px;">status</th>
                      <th style="padding: 15px;">Delete</th>
                  </tr>
 
@@ -34,6 +35,7 @@
                      <td>{{ $doctors->speciality }}</td>
                      <td>{{ $doctors->work }}</td>
                      <td>{{ $doctors->image }}</td>
+                     <td>{{ $doctors->status }}</td>
                      <td>
                          <a class="btn btn-danger" href="/delete/{{ $doctors->id }}">Delete</a>
                      </td>

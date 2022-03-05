@@ -10,6 +10,10 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'redirect'])->
 middleware('auth','verified');
 
+Route::get('/doctorview', [HomeController::class, 'showdoctor']);
+Route::get('/aboutus', [HomeController::class, 'aboutus']);
+Route::get('/contact', [HomeController::class, 'contact']);
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
@@ -41,3 +45,4 @@ Route::get('/click_delete/{id}',[AdminController::class, 'delete_hospital']);
 // for approve doctor
 Route::get('/approvedoctor', [AdminController::class, 'approvedoctor']);
 Route::get('status/{id}', [AdminController::class, 'status'])->name('status');
+

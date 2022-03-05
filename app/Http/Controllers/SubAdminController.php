@@ -43,6 +43,7 @@ class SubAdminController extends Controller
     public function add(Request $request)
     {
         $add_bed=new add_bed;
+      
         $add_bed->hospital=$request->hospital;
         $add_bed->total_bed=$request->totalbed;
         $add_bed->available_bed=$request->availablebed;
@@ -59,5 +60,22 @@ class SubAdminController extends Controller
            return redirect('approve')->with('message','Doctor deleted');
 
        }
+
+       public function updatebed()
+       {
+           return view('subadmin.updatebed');
+       }
+       
+    //    public function deletehospital()
+    //    {
+    //        $updatebed=add_bed::All();
+    //        return view('subadmin.updatebed',compact('updatebed'));
+    //    }
+    //    public function update($id)
+    // {
+    //     DB::update('update in add_beds where id=?',[$id]);
+    //     return redirect('updatebed')->with('message','bed updated');
+
+    // } 
 
 }

@@ -23,7 +23,7 @@
                      <th style="padding: 15px;">email</th>
                      <th style="padding: 15px;">number</th>
                      <th style="padding: 15px;">address</th>
-                     <th style="padding: 15px;">status</th>
+                     <th style="padding: 15px;">usertype</th>
                      <th style="padding: 15px;">image</th>
                      <th style="padding: 15px;">Delete</th>
                  </tr>
@@ -34,7 +34,7 @@
                      <td>{{ $users->email }}</td>
                      <td>{{ $users->number }}</td>
                      <td>{{ $users->address }}</td>
-                     <td>{{ $users->status }}</td>
+                     <td>{{ $users->usertype }}</td>
                      <td>{{ $users->image }}</td>
                      <td>
                          <a class="btn btn-danger" href="/click_delete/{{ $users->id }}">Delete</a>

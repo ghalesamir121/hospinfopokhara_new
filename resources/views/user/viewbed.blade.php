@@ -10,12 +10,10 @@
            <div class="header">
             {{-- <img height="300 px" src="adminimage/{{ $admins->image }}" alt=""> --}}
              <div class="meta">
-              {{-- <a href="https://gpphlreport.dolphin.com.np/"><span class="mai-call"></span></a> --}}
-              {{-- <a href="#"><span class="mai-logo-whatsapp"></span></a> --}}
             </div>
           </div>
           <div class="body">
-            <p class="text-xl mb-0">Hospital:  {{$add_beds->hospital }}</p>
+            <p class="text-xl mb-0" style="color:lightgreen">{{$add_beds->hospital }}</p>
             <span class="text-sm text-grey">Total Bed: {{$add_beds->total_bed }}</span><br>
             <span class="text-sm text-grey">Available Bed: {{$add_beds->available_bed }}</span><br>
             <span class="text-sm text-grey">Total ICU: {{$add_beds->total_icu }}</span><br>

@@ -32,16 +32,16 @@
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a class="nav-link" href="/aboutus">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="displaydoctor.blade.php">Doctors</a>
+              <a class="nav-link" href="/doctorview">Doctors</a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
               <a class="nav-link" href="blog.html">News</a>
-            </li>
+            </li> --}}
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="/contact">Contact</a>
             </li>
 
             @if(Route::has('login'))
@@ -84,7 +84,7 @@
           <div class="col-lg-6 py-3 wow fadeInUp">
             <h1>WELCOME TO HOSPINFO_POKHARA </h1>
             <p class="text-grey mb-4">HOSPINFO_POKHARA</p>
-            <a href="about.html" class="btn btn-primary">Learn More</a>
+            <a href="/aboutus" class="btn btn-primary">Learn More</a>
           </div>
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
             <div class="img-place custom-img-1">
@@ -97,11 +97,8 @@
     </div>
   </div>
 
-  {{-- @include('user.doctor') --}}
   @include('user.viewbed') 
-
- {{-- @include('user.viewreport') --}}
-
+  
  <div class="page-section pb-0">
   <div class="container">
     <div class="row align-items-center">
@@ -112,7 +109,7 @@
         <a href="https://vaccine.mohp.gov.np/" class="btn btn-primary">Vaccine Registration </a>
         <br>
         <br>
-        <a href="https://raktadatanepal.com/" class="btn btn-primary">Blood Donation </a>
+        {{-- <a href="https://raktadatanepal.com/" class="btn btn-primary">Blood Donation </a> --}}
       </div>
       <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
         <div class="img-place custom-img-1">

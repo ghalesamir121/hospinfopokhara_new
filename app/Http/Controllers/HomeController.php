@@ -14,18 +14,6 @@ class HomeController extends Controller
 {
     public function redirect()
     {
-        // if (Auth::id()) {
-        //     if (Auth::user()->usertype == '0') {
-            
-        //         return view('subadmin.home');
-        //     } else {
-        //         return view('admin.home');
-        //     }
-        // } else {
-        //     return redirect()->back();
-        // }
-
-
         if (Auth::id()) {
             if (Auth::user()->usertype == '1') 
             {
@@ -49,11 +37,24 @@ class HomeController extends Controller
         $viewbed=add_bed::all();
         return view('user.home',compact('viewbed'));
     }
-    public function doctor()
+    
+
+
+    public function showdoctor()
     {
-        $doctor=doctor::all();
-        // return view('user.Doctors',compact('doctor'));
-        return view('doctor.Doctors',compact('doctor'));
-       
+        // $doctor=doctor::all();
+        $doctor = doctor::where('status',1)->get();
+        return view('user.doctorview',compact('doctor'));
     }
+
+    public function aboutus()
+    {
+        return view('user.aboutus');
+    }
+
+    public function contact()
+    {
+        return view('user.contact');
+    }
+
 }
