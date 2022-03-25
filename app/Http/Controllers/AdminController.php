@@ -12,7 +12,8 @@ class AdminController extends Controller
 {
     public function approvehospital()
     {
-        $hospital=User::all();
+        $hospital=User::all()
+        ->where("usertype", 0);
         return view('admin.approvehospital',compact('hospital'));
     }
     public function usertype(Request $request,$id)
@@ -51,8 +52,6 @@ public function status(Request $request,$id)
          return redirect()->back()->with('message',$value->name.'  status changed Successfully');
     }
     
-
-    //for delete hospital
     public function approve()
     {
         $data=doctor::all();
@@ -61,9 +60,13 @@ public function status(Request $request,$id)
 
     public function deletehospital()
     {
-        $hospital=user::All();
-        return view('admin.deletehospital',compact('hospital'));
-
+        // $hospital=user::All();
+        // return view('admin.deletehospital',compact('hospital'));
+        $hospital = User::All()
+         ->where("usertype", 1);
+    
+        return view('admin.deletehospital',compact('hospital')); 
+   
     }
     public function delete_hospital($id)
     {

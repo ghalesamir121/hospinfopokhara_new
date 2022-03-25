@@ -6,9 +6,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SubAdminController;
 
 
+// Auth::routes();
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/home', [HomeController::class, 'redirect'])->
-middleware('auth','verified');
+Route::get('/home', [HomeController::class, 'redirect']);
 
 Route::get('/doctorview', [HomeController::class, 'showdoctor']);
 Route::get('/aboutus', [HomeController::class, 'aboutus']);
@@ -46,3 +46,7 @@ Route::get('/click_delete/{id}',[AdminController::class, 'delete_hospital']);
 Route::get('/approvedoctor', [AdminController::class, 'approvedoctor']);
 Route::get('status/{id}', [AdminController::class, 'status'])->name('status');
 
+
+
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

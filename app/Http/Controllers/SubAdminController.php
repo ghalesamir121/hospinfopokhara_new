@@ -20,7 +20,7 @@ class SubAdminController extends Controller
     {
        $doctor=new doctor;
        $image=$request->file;
-       $imagename=time().'.'.$image->getClientOriginalExtension();
+       $imagename=time().'.'.$image->getClientOriginalExtension() ;
        $request->file->move('doctorimage',$imagename);
        $doctor->image=$imagename;
        $doctor->name=$request->name;
@@ -49,6 +49,7 @@ class SubAdminController extends Controller
         $add_bed->available_bed=$request->availablebed;
         $add_bed->total_icu=$request->totalicu;
         $add_bed->available_icu=$request->availableicu;
+        $add_bed->image=$request->image;
 
         $add_bed->save();
        return redirect()->back()->with('message','Bed and ICU Added Successfully');
@@ -66,16 +67,5 @@ class SubAdminController extends Controller
            return view('subadmin.updatebed');
        }
        
-    //    public function deletehospital()
-    //    {
-    //        $updatebed=add_bed::All();
-    //        return view('subadmin.updatebed',compact('updatebed'));
-    //    }
-    //    public function update($id)
-    // {
-    //     DB::update('update in add_beds where id=?',[$id]);
-    //     return redirect('updatebed')->with('message','bed updated');
-
-    // } 
 
 }

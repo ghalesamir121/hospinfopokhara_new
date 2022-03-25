@@ -23,7 +23,7 @@ class CreateAddBedsTable extends Migration
             $table->string('available_bed')->nullable();
             $table->string('total_icu')->nullable();
             $table->string('available_icu')->nullable();
-            $table->string('image')->nullable();
+            $table->string('image');
             $table->timestamps();
         });
     }

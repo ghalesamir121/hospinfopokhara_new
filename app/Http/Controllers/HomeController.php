@@ -35,6 +35,7 @@ class HomeController extends Controller
     public function index()
     {
         $viewbed=add_bed::all();
+        // $viewbed = add_bed::where('hospital',)->get();
         return view('user.home',compact('viewbed'));
     }
     

@@ -9,6 +9,7 @@
         <div class="card-doctor">
            <div class="header">
             {{-- <img height="300 px" src="adminimage/{{ $admins->image }}" alt=""> --}}
+            <img height="300 px" src="hospitalphoto/{{ $add_beds->image }}" alt=""> 
              <div class="meta">
             </div>
           </div>
