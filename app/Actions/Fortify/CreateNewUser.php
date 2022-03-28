@@ -18,22 +18,21 @@ class CreateNewUser implements CreatesNewUsers
      * @param  array  $input
      * @return \App\Models\User
      */
-    public function create(array $input)
-    {
-        Validator::make($input, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => $this->passwordRules(),
-            'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
-        ])->validate();
-
-        return User::create([
-            'name' => $input['name'],
-            'email' => $input['email'],
-            'number' => $input['number'],
-            'address' => $input['address'],
-            'password' => Hash::make($input['password']),
-            'image' => $input['image'],
+    public function create(array $data)
+    {        
+       $user= User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'number'=>$data['number'],
+            'address'=>$data['address'],
+            'password' => Hash::make($data['password']),
+            
         ]);
+        if(request()->hasFile('image')){
+            $image=request()->file('image')->getClientOriginalName();
+            request()->file('image')->move('hospitalphoto', name:$user->id.'/'.$image);
+            $user->update(['image'=>$image]);
+        }
+        return $user;
     }
 }

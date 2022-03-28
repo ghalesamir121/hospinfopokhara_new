@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use App\Models\Doctor;
 use App\Models\add_bed;
@@ -62,10 +62,16 @@ class SubAdminController extends Controller
 
        }
 
+       public function update()
+       {
+        $data =add_bed::All();
+        // ->where('hospital', 'Auth::user()->name ');
+       return view('subadmin.update',compact('data')); 
+       }
+   
        public function updatebed()
        {
-           return view('subadmin.updatebed');
+       return view('subadmin.updatebed'); 
        }
-       
 
 }

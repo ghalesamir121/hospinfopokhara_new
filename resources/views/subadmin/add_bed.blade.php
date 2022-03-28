@@ -58,12 +58,6 @@
         <label>Available ICU:</label>
         <input type="number" style="color:black;" name="availableicu" placeholder="Enter Available ICU" required="" min="0">
     </div>
-    {{-- <div style="padding: 10px;">
-        <label>image:</label>
-        <select name="hospital" style="color: black" required="">
-            <option value="{{ Auth::user()->image }}" selected>{{ Auth::user()->image }}</option>
-        </select>
-    </div> --}}
 
     <div style="padding: 10px;">
         <label>image:</label>

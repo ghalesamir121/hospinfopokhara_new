@@ -2,37 +2,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <base href="/public">
     @include('subadmin.css')
   </head>
   <body>
      <div class="container-scroller">
       @include('subadmin.sidebar')
-@include('subadmin.navbar')
+      @include('subadmin.navbar')
      <div class="container-fluid page-body-wrapper">
          <div align="center" style="padding-top: 80px;">
-             <table>
-                 <tr style="background-color: black;">
-                     <th style="padding: 15px;">Hospital</th>
-                     <th style="padding: 15px;">Total Bed</th>
-                     <th style="padding: 15px;">Available Bed</th>
-                     <th style="padding: 15px;">Total ICU</th>
-                     <th style="padding: 15px;">Available ICU</th>
-                     <th style="padding: 15px;">Update</th>
-                 </tr>
+       <form action="">              
+  <div style="padding: 10px;">
+      <label>Total Bed:</label>
+      <input type="number" style="color:black;" name="totalbed">
+  </div>
+  <div style="padding: 10px;">
+      <label>Available Bed:</label>
+      <input type="number" style="color:black;" name="availablebed">
+  </div>
 
-                  @foreach ($updatebed as $add_bed)
-                 <tr align="center" style="background-color: skyblue";>
-                     <td>{{ $add_bed->hospital }}</td>
-                     <td>{{ $add_bed->total_bed }}</td>
-                     <td>{{ $add_bed->available_bed }}</td>
-                     <td>{{ $add_bed->total_icu }}</td>
-                     <td>{{ $add_bed->available_icu }}</td>
-                     <td>
-                        <a class="btn btn-primary" href="/click_update/{{ $add_bed->id }}">Update</a>
-                     </td>
-                 </tr>
-                 @endforeach 
-             </table>
+  <div style="padding: 10px;">
+      <label>Total ICU:</label>
+      <input type="number" style="color:black;" name="totalicu">
+  </div>
+
+  <div style="padding: 10px;">
+      <label>Available ICU:</label>
+      <input type="number" style="color:black;" name="availableicu" value="{{  $data->available_icu}}">
+  </div>
+      <div style="padding: 10px;">
+        <input type="Submit" class="btn btn-success" >
+      </div>
+
+             </form>
          </div>
      </div>
     @include('subadmin.script')

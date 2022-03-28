@@ -83,7 +83,7 @@
         <div class="row align-items-center">
           <div class="col-lg-6 py-3 wow fadeInUp">
             <h1>WELCOME TO HOSPINFO_POKHARA </h1>
-            <p class="text-grey mb-4">HOSPINFO_POKHARA</p>
+            {{-- < class="text-grey mb-4">HOSPINFO_POKHARA</p>p --}}
             <a href="/aboutus" class="btn btn-primary">Learn More</a>
           </div>
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">

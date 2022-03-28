@@ -46,7 +46,5 @@ Route::get('/click_delete/{id}',[AdminController::class, 'delete_hospital']);
 Route::get('/approvedoctor', [AdminController::class, 'approvedoctor']);
 Route::get('status/{id}', [AdminController::class, 'status'])->name('status');
 
-
-
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/update', [SubAdminController::class, 'update']);
+Route::get('/click_update/{id}', [SubAdminController::class, 'updatebed']);

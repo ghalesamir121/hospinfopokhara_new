@@ -54,7 +54,6 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'image'=>['sometimes','image','mimes:jpg,jpeg,bmp,png'],
         ]);
     }
 
@@ -65,43 +64,20 @@ class RegisterController extends Controller
      * @return \App\Models\User
      */
     protected function create(array $data)
-    {
-        // if(request()->has('image'))
-        // {
-            $image=request()->file('image');
-            $imagename=time().'.'.$image->getClientOriginalExtension();
-            $imagepath= public_path('/hospitalphoto');
-            $image->move($imagepath,$imagename);
-        
-    
-        return User::create([
+    {        
+       $user= User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'number'=>$data['number'],
             'address'=>$data['address'],
             'password' => Hash::make($data['password']),
-            'image'=>$data['image'],
-            // 'image'=>$fileName,
+            
         ]);
-
-
-        // $file_extention = $data['image']->getClientOriginalExtension();
-        // $file_name = time().rand(99,999).'image.'.$file_extention;
-        // $file_path = $data['image']->move(public_path().'/hospitalphoto',$file_name);
-    
-        // return User::create([
-        //     // 'name' => $data['name'],
-        //     // 'email' => $data['email'],
-        //     // 'password' => bcrypt($data['password']),
-        //     // 'dob' => $data['dob'],
-        //     // 'profile_picture' => $file_path,
-        //     'name' => $data['name'],
-        //     'email' => $data['email'],
-        //     'number'=>$data['number'],
-        //     'address'=>$data['address'],
-        //     'password' => Hash::make($data['password']),
-        //     'image'=>$file_path 
-        //]);
-    
+        if(request()->hasFile('image')){
+            $image=request()->file('image')->getClientOriginalName();
+            request()->file('image')->storeAs(path:'image', name:$user->id.'/'.$image);
+            $user->update(['image'=>$image]);
+        }
+        return $user;
     }
 }

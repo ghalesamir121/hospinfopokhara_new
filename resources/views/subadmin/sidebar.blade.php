@@ -76,7 +76,7 @@
         </a>
       </li>
       <li class="nav-item menu-items">
-        <a class="nav-link" href="{{url('updatebed')}}">
+        <a class="nav-link" href="{{url('update')}}">
           <span class="menu-icon">
             <i class="mdi mdi-file-document-box"></i>
           </span>

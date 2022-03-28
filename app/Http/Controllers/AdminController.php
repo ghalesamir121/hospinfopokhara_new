@@ -60,8 +60,6 @@ public function status(Request $request,$id)
 
     public function deletehospital()
     {
-        // $hospital=user::All();
-        // return view('admin.deletehospital',compact('hospital'));
         $hospital = User::All()
          ->where("usertype", 1);
     
