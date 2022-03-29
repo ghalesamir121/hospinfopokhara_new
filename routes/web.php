@@ -48,3 +48,4 @@ Route::get('status/{id}', [AdminController::class, 'status'])->name('status');
 
 Route::get('/update', [SubAdminController::class, 'update']);
 Route::get('/click_update/{id}', [SubAdminController::class, 'updatebed']);
+Route::post('/edit/{id}', [SubAdminController::class, 'edit']);
