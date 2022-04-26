@@ -43,7 +43,7 @@ class SubAdminController extends Controller
     public function add(Request $request)
     {
         $add_bed=new add_bed;
-      
+
         $add_bed->hospital=$request->hospital;
         $add_bed->total_bed=$request->totalbed;
         $add_bed->available_bed=$request->availablebed;
@@ -65,14 +65,14 @@ class SubAdminController extends Controller
        public function update()
        {
         $data =add_bed::All();
-        // ->where('hospital', 'Auth::user()->name');
-       return view('subadmin.update',compact('data')); 
+        //-> where('hospital', 'Auth::user()->name');
+       return view('subadmin.update',compact('data'));
        }
 
        public function updatebed($id)
        {
            $value=Add_bed::find($id);
-       return view('subadmin.updatebed',compact('value')); 
+       return view('subadmin.updatebed',compact('value'));
        }
 
        public function edit(Request $request,$id)
