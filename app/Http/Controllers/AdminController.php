@@ -27,13 +27,14 @@ class AdminController extends Controller
            $data->usertype=0;
         }
          $data->save();
-         return redirect()->back()->with('message',$data->name.'  status changed Successfully');
+         return redirect()->back()->with('message',$data->name.'  Approved  Successfully');
     }
 
     //for approve doctor
  public function approvedoctor()
     {
-        $doctor=Doctor::all();
+        $doctor=Doctor::all()
+        ->where("status", 0);
         return view('admin.approvedoctor',compact('doctor'));
     }
 
@@ -49,7 +50,7 @@ public function status(Request $request,$id)
         }
         
          $value->save();
-         return redirect()->back()->with('message',$value->name.'  status changed Successfully');
+         return redirect()->back()->with('message',$value->name.'  Approved Successfully');
     }
     
     public function approve()
@@ -61,15 +62,18 @@ public function status(Request $request,$id)
     public function deletehospital()
     {
         $hospital = User::All()
-         ->where("usertype", 1);
+         ->where("usertype",1);
     
         return view('admin.deletehospital',compact('hospital')); 
    
     }
     public function delete_hospital($id)
     {
-        DB::delete('delete from users where usertype=?',[$id]);
-        return redirect('deletehospital')->with('message','Hospital deleted');
+        // DB::delete('delete from users where usertype=?',[$id]);
+        // return redirect('deletehospital')->with('message',' deleted Successfully');
+       $hospital=User::find($id);
+       $hospital->delete();
+       return redirect('deletehospital')->with('message',$hospital->name.'  deleted Successfully');
 
     } 
 }

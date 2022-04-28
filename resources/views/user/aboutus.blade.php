@@ -1,15 +1,17 @@
 <html>
     <title> HOSPINFOPOKHARA</title>
     <body>
-        
-  <h1 align="center">HOSPINFO_POKHARA</h1>
-<h1> 
-    HOSPINFO_POKHARA is the web application that is built to reduce the
+
+  <h1 align="center"  style="font-size:300%;"><strong>Hospinfo_Pokhara</strong></h1>
+<h1 style="background-color:powderblue;">
+    <p style="font-style:#7fffd4;">
+
+    Hospinfo_Pokhara is the web application that is built to reduce the
     people's problem to know the information about bed status, location and
     phone number and many more about hospital's in pokhara. It is very
     difficult to find bed's status of hospital in current COVID time so this
     project helps you to find the bed's status of hospital inside pokhara
-    valley. 
+    valley.
 </p>
 <p>
     We also provide information about the hospital and doctors so

@@ -8,7 +8,7 @@
         <div class="profile-desc">
           <div class="profile-pic">
             <div class="count-indicator">
-              <img src="{{ asset('/Source') }}/logo.PNG" width="200" height="300">
+              <img src="{{ asset('/Source') }}/final.PNG" width="200" height="300">
               {{-- <img class="img-xs rounded-circle " src="admin/assets/images/faces/face15.jpg" alt=""> --}}
               <span class="count bg-success"></span>
             </div>

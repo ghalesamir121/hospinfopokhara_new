@@ -17,6 +17,13 @@
        
      <div class="container-fluid page-body-wrapper">
          <div align="center" style="padding-top: 80px;">
+            @if (session()->has('message'))
+            <div class="alert alert-success">
+            <button type="button " class="close" data-dismiss="alert">x</button>
+            {{ session()->get('message') }}
+            
+            </div>
+            @endif
              <table>
                  <tr style="background-color: black;">
                      <th style="padding: 15px;">Name</th>
@@ -37,6 +44,7 @@
                      <td>{{ $users->usertype }}</td>
                      <td>{{ $users->image }}</td>
                      <td>
+                         {{-- <a class="btn btn-danger" href="/click_delete/{{ $users->id }}">Delete</a> --}}
                          <a class="btn btn-danger" href="/click_delete/{{ $users->id }}">Delete</a>
                      </td>
                  </tr>
