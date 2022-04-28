@@ -65,12 +65,7 @@ class SubAdminController extends Controller
        public function update()
        {
         $data =add_bed::all()
-        //   -> where('hospital', 'Auth::user()->name');
          -> where('hospital', 'Gandaki Hospital');
-=======
-        $data =add_bed::All();
-        //-> where('hospital', 'Auth::user()->name');
->>>>>>> c9e4797dbade5d91368123ed185b0f21a0af657f
        return view('subadmin.update',compact('data'));
        }
 
